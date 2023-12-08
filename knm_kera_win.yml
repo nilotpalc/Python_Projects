@@ -1,0 +1,40 @@
+name: knm_keras_win  # Name of the created environment
+channels:             # Repositories to search for packages
+# - defaults             # edit: removed to just use conda-forge
+# - anaconda             # edit: removed to just use conda-forge
+- conda-forge
+dependencies:         # List of packages that should be installed
+- python>=3.6          # Python
+- py4j                # uesd for KNIME <-> Python communication
+- nomkl               # Prevents the use of Intel's MKL
+- pandas              # Table data structures
+- jedi<=0.17.2              # Python script autocompletion
+- python-dateutil     # Date and Time utilities
+- numpy>=1.15         # N-dimensional arrays
+- cairo               # SVG support
+- pillow              # Image inputs/outputs
+# - matplotlib          # Plotting
+- pyarrow=6.0               # Arrow serialization
+- IPython                   # Notebook support
+- nbformat                  # Notebook support
+- scipy                     # Notebook support
+- jpype1                    # Databases
+- h5py<3.0                  # must be < 3.0 because they changed whether str or byte is returned
+- libiconv                  # MDF Reader node
+- asammdf=5.19.14           # MDF Reader node
+# somtimes there seems to be a bit of a drama with tensorflow and Keras versions. You might have to do this by hand
+# pip uninstall tensorflow
+
+# https://github.com/tensorflow/tensorflow/issues/51590
+# conda install -n knime_py_keras_win -c conda-forge tensorflow==1.14 
+# serach for the available package versions on conda-forge
+# conda search conda-forge::tensorflow
+# conda list -n knime_py_keras_win -f tensorflow --json
+
+# conda install -n knime_py_keras_win -c conda-forge tensorflow==1.14
+- tensorflow==1.14       # TensorFlow has to be a number close to 1.12
+# - tensorflow-mkl==1.14
+- tensorflow-estimator==1.14 # or mac will install 2.6 which doesn't work
+- tensorflow-hub
+- keras==2.2.4
+- pip                    # Python installer

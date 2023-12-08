@@ -1,0 +1,35 @@
+channels:
+- defaults
+- conda-forge
+dependencies:
+- python
+- numpy
+- pandas
+- scipy
+- scikit-learn
+- matplotlib
+- seaborn
+- statsmodels
+- jupyter
+- notebook
+- sqlalchemy
+- sqlite
+- pyodbc
+- pymysql
+- plotly
+- bokeh
+- altair
+- pyts
+- nltk
+- spacy
+- pulp
+- joblib
+- feather-format
+- fuzzywuzzy
+- beautifulsoup4
+- requests-html
+- scrapy
+- openpyxl
+- xlrd
+- xlwt
+name: ds_env

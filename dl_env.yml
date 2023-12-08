@@ -1,0 +1,25 @@
+name: dl_env
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - jupyter
+  - tensorflow=2.11.0
+  - keras
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.2
+  - pillow
+  - tqdm
+  - seaborn
+  - h5py
+  - opencv
+  - pyarrow
+  - py4j
